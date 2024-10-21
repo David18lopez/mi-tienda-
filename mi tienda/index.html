@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivero Flor de Jade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Inicio -->
+    <header>
+        <div class="header-container">
+            <h1>Vivero Flor De Jade</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#tienda">Tienda</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li class="cart"><a href="#" id="viewCart">🛒<span id="cartCount">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Principal -->
+    <section class="main-section">
+        <h2>Descubre la belleza de nuestras flores únicas.</h2>
+        <button onclick="window.location.href='#tienda'">Comprar</button>
+        <button onclick="window.location.href='#tienda'">Ver</button>
+    </section>
+
+    <!-- Tienda -->
+    <section id="tienda" class="store-section">
+        <h2>Productos en Venta</h2>
+        <div class="product-grid">
+            <!-- Producto 1 -->
+            <div class="product-item">
+                <img src="producto1.jpg" alt="Producto 1">
+                <h3>Producto 1</h3>
+                <p>Q100</p>
+                <button onclick="addToCart('Producto 1', 100)">Añadir a la bolsa</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="product-item">
+                <img src="producto2.jpg" alt="Producto 2">
+                <h3>Producto 2</h3>
+                <p>Q80</p>
+                <button onclick="addToCart('Producto 2', 80)">Añadir a la bolsa</button>
+            </div>
+            <!-- Agrega más productos aquí -->
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion">
+        <h2>Ubicación</h2>
+        <p>Nos ubicamos en La Esperanza, Quetzaltenango, Guatemala.</p>
+        <a href="https://maps.app.goo.gl/ZvZ87A5gNXdybVWLA" target="_blank">Ver mapa</a>
+        <p>Horario: Lunes a Sábado 8am-5pm, Domingos 8am-4pm</p>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Manuel Escobar</p>
+        <p>+502 30895556</p>
+        <a href="https://www.facebook.com">Síguenos en Facebook</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024. All rights reserved.</p>
+    </footer>
+
+    <!-- Carrito Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cartItems"></div>
+            <button onclick="submitOrder()">Recoger en tienda</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
